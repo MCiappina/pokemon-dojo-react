@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { CardList } from './components/CardList/CardList'
 import './App.css'
-import { CardProps } from './components/Card/Card'
+import { CardType } from './components/Card/Card'
 
 import axios from 'axios'
 
 function App() {
-  const [cards, setCards] = useState<Array<CardProps>>([])
+  const [cards, setCards] = useState<Array<CardType>>([])
 
   useEffect(() => {
     axios.get("https://pokeapi.co/api/v2/pokemon/?limit=20&offset=0").then(response => {
